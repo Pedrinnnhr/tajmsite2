@@ -1,19 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const translateBtn = document.getElementById('translate-btn');
-    const translateText = (lang) => {
+    let isEnglish = false;
+
+    translateBtn.addEventListener('click', function() {
         const elements = document.querySelectorAll('[data-pt], [data-en]');
+
         elements.forEach(el => {
-            if (lang === 'en') {
-                el.textContent = el.getAttribute('data-en') || el.textContent;
+            const ptText = el.getAttribute('data-pt');
+            const enText = el.getAttribute('data-en');
+
+            if (isEnglish) {
+                el.textContent = ptText || el.textContent;
             } else {
-                el.textContent = el.getAttribute('data-pt') || el.textContent;
+                el.textContent = enText || el.textContent;
             }
         });
-    };
 
-    translateBtn.addEventListener('click', () => {
-        const currentLang = translateBtn.textContent === 'Traduzir' ? 'en' : 'pt';
-        translateText(currentLang);
-        translateBtn.textContent = currentLang === 'en' ? 'Traduzir' : 'Translate';
+        isEnglish = !isEnglish;
+        translateBtn.textContent = isEnglish ? 'Traduzir para Português' : 'Translate to English';
     });
 });
