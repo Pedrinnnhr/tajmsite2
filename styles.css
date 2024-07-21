@@ -1,15 +1,26 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset básico */
+body, h1, h2, p, ul {
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
 }
 
 header {
     background: #333;
     color: #fff;
-    padding: 15px;
+    padding: 10px 20px;
     text-align: center;
+}
+
+header h1 {
+    margin: 0;
 }
 
 nav ul {
@@ -19,7 +30,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin-right: 10px;
 }
 
 nav ul li a {
@@ -31,39 +42,40 @@ button {
     background: #555;
     color: #fff;
     border: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 button:hover {
     background: #777;
 }
 
-section {
+main {
     padding: 20px;
-    margin: 20px;
-    background: #fff;
-    border-radius: 8px;
 }
 
-#galeria {
+section {
+    margin-bottom: 20px;
+}
+
+.gallery {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    gap: 10px;
 }
 
-#galeria img {
-    max-width: 30%;
+.gallery img {
+    width: 100%;
+    max-width: 300px;
     height: auto;
-    margin: 10px;
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background-color: #f4f4f4;
+    padding: 10px 20px;
     text-align: center;
-    padding: 10px;
+    border-top: 1px solid #ddd;
     position: fixed;
-    width: 100%;
     bottom: 0;
+    width: 100%;
 }
