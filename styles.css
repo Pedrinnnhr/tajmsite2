@@ -1,54 +1,50 @@
-/* Reset básico */
-body, h1, h2, p, ul {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     line-height: 1.6;
-    color: #333;
-    background-color: #fff;
+    font-size: 18px; /* Aumenta o tamanho da fonte padrão */
 }
 
 header {
     background: #333;
     color: #fff;
-    padding: 10px 20px;
+    padding: 20px 0; /* Aumenta o padding para mais espaço */
     text-align: center;
+    position: relative;
+    z-index: 1000;
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.5em; /* Aumenta o tamanho do título */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin: 0 15px; /* Aumenta o espaçamento entre os itens do menu */
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 1.2em; /* Aumenta o tamanho da fonte dos links */
 }
 
 button {
+    margin-top: 20px; /* Aumenta o espaço acima do botão */
+    padding: 15px 20px; /* Aumenta o padding do botão */
+    border: none;
     background: #555;
     color: #fff;
-    border: none;
-    padding: 10px 20px;
     cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-    background: #777;
+    font-size: 1.2em; /* Aumenta o tamanho da fonte do botão */
 }
 
 main {
@@ -56,25 +52,41 @@ main {
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 40px; /* Aumenta o espaço entre as seções */
+}
+
+section h2 {
+    font-size: 2em; /* Aumenta o tamanho dos títulos das seções */
+    margin-bottom: 10px; /* Aumenta o espaço abaixo dos títulos */
+}
+
+section p {
+    font-size: 1.1em; /* Aumenta o tamanho da fonte dos parágrafos */
+    margin-bottom: 20px; /* Aumenta o espaço abaixo dos parágrafos */
 }
 
 .gallery {
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
+    gap: 10px; /* Adiciona espaço entre as imagens */
 }
 
 .gallery img {
+    width: 32%; /* Ajusta a largura das imagens para que fiquem mais espaçadas */
+    border-radius: 8px;
+}
+
+audio {
     width: 100%;
-    max-width: 300px;
-    height: auto;
+    margin-top: 20px; /* Aumenta o espaço acima do player de áudio */
+    font-size: 1.1em; /* Ajusta o tamanho da fonte do player de áudio */
 }
 
 footer {
-    background-color: #f4f4f4;
-    padding: 10px 20px;
+    background: #333;
+    color: #fff;
     text-align: center;
-    border-top: 1px solid #ddd;
+    padding: 20px;
     position: fixed;
     bottom: 0;
     width: 100%;
