@@ -1,11 +1,16 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Garante que o corpo ocupe toda a altura da tela */
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
-    box-sizing: border-box; /* Inclui o padding e bordas no cálculo da largura e altura do elemento */
 }
 
 header {
@@ -56,6 +61,7 @@ section {
     background: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Faz com que a seção ocupe o espaço disponível */
 }
 
 section h2 {
@@ -86,8 +92,5 @@ footer {
     padding: 20px;
     background: #333;
     color: #fff;
-    position: relative;
-    bottom: 0;
     width: 100%;
-    margin-top: auto; /* Adiciona espaço automático acima do rodapé para empurrar para o final */
 }
