@@ -89,9 +89,15 @@ footer p {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    outline: none; /* Remove o contorno padrão ao focar */
 }
 
 #translate-btn:hover {
     background-color: #2980b9;
+}
+
+#translate-btn:active {
+    background-color: #2980b9;
+    transform: scale(0.98); /* Efeito de clique */
 }
